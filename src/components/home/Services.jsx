@@ -4,43 +4,87 @@ import './Services.css';
 const Services = () => {
   const services = [
     {
-      title: "Terapia Individual",
-      description: "Sesiones personalizadas con psicólogas especializadas en maternidad",
+      title: "Terapia Psicológica",
+      description: "Acompañamiento profesional adaptado a tus necesidades, individual o grupal",
       icon: "🧘‍♀️",
-      price: "Desde $5.000/sesión"
-    },
-    {
-      title: "Talleres Grupales",
-      description: "Espacios de aprendizaje y conexión con otras madres",
-      icon: "👭",
-      price: "Desde $2.000/taller"
+      price: "Desde $10.000",
+      period: "por sesión",
+      features: [
+        "Sesiones individuales o grupales",
+        "Atención personalizada",
+        "Modalidad online o presencial",
+        "Grupos reducidos y material de apoyo",
+        "Horarios flexibles"
+      ],
+      options: [
+        { type: "Individual", price: "$3.000" },
+        { type: "Grupal", price: "$5.000" }
+      ]
     },
     {
       title: "Coaching Maternal",
-      description: "Acompañamiento en tu desarrollo personal como madre",
+      description: "Potencia tu desarrollo personal en esta nueva etapa de vida",
       icon: "✨",
-      price: "Desde $3.000/sesión"
+      price: "Desde $8.000",
+      period: "por sesión",
+      features: [
+        "Plan personalizado",
+        "Seguimiento continuo",
+        "Herramientas prácticas",
+        "Apoyo entre sesiones",
+        "Comunidad activa"
+      ]
     },
     {
-      title: "Mindfulness",
-      description: "Aprende técnicas de atención plena para la maternidad",
+      title: "Mindfulness Maternal",
+      description: "Encuentra equilibrio y consciencia en tu maternidad",
       icon: "🌸",
-      price: "Desde $2.000/sesión"
+      price: "Desde $10.000",
+      period: "por sesión",
+      features: [
+        "Técnicas de respiración",
+        "Meditaciones guiadas",
+        "Prácticas diarias",
+        "Material audiovisual",
+        "Ejercicios de conexión"
+      ]
     }
   ];
 
   return (
     <section className="services">
-      <h2>Nuestros Servicios</h2>
-      <p className="section-subtitle">Descubre el apoyo que necesitas</p>
+      <div className="services-header">
+        <h2>Nuestros Servicios</h2>
+        <p className="section-subtitle">Descubre el apoyo que necesitas en tu camino maternal</p>
+      </div>
       <div className="services-grid">
         {services.map((service, index) => (
           <div key={index} className="service-card">
-            <span className="service-icon">{service.icon}</span>
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
-            <span className="service-price">{service.price}</span>
-            <button className="service-button">Reservar</button>
+            <div className="service-header">
+              <span className="service-icon">{service.icon}</span>
+              <h3>{service.title}</h3>
+              <p className="service-description">{service.description}</p>
+            </div>
+            <div className="service-pricing">
+              <span className="service-price">{service.price}</span>
+              <span className="service-period">{service.period}</span>
+              {service.options && (
+                <div className="service-options">
+                  {service.options.map((option, i) => (
+                    <div key={i} className="option">
+                      <span className="option-type">{option.type}</span>
+                      <span className="option-price">{option.price}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            <ul className="service-features">
+              {service.features.map((feature, i) => (
+                <li key={i}>{feature}</li>
+              ))}
+            </ul>
+            <button className="service-button">Agendar Ahora</button>
           </div>
         ))}
       </div>

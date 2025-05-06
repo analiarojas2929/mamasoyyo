@@ -7,19 +7,19 @@ const Experts = () => {
       name: "Dra. Carolina López",
       role: "Psicóloga Perinatal",
       description: "Especialista en apoyo emocional durante el embarazo y postparto",
-      image: "/experts/expert1.jpg"
+      image: require("../../assets/img/experts/expert1.jpg")
     },
     {
-      name: "María Fernández",
+      name: "Marco Fernández",
       role: "Coach Maternal",
-      description: "Experta en desarrollo personal y transición a la maternidad",
-      image: "/experts/expert2.jpg"
+      description: "Experto en desarrollo personal y transición a la maternidad",
+      image: require("../../assets/img/experts/expert2.jpg")
     },
     {
       name: "Ana Silva",
       role: "Terapeuta Familiar",
       description: "Especializada en vínculos madre-hijo y relaciones familiares",
-      image: "/experts/expert3.jpg"
+      image: require("../../assets/img/experts/expert3.jpg")
     }
   ];
 

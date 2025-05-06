@@ -1,41 +1,52 @@
 .services {
   padding: 5rem 2rem;
-  background-color: #FFF5F2;
+  background: linear-gradient(135deg, #FFF5F2 0%, #FFFFFF 100%);
 }
 
-h2 {
+.services-header {
   text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.services h2 {
   color: var(--beaver);
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .section-subtitle {
-  text-align: center;
   color: var(--toast);
   font-size: 1.2rem;
-  margin-bottom: 3rem;
+  line-height: 1.6;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .service-card {
-  background-color: white;
+  background: white;
+  border-radius: 20px;
   padding: 2rem;
-  border-radius: 15px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .service-icon {
@@ -46,30 +57,67 @@ h2 {
 
 .service-card h3 {
   color: var(--beaver);
-  margin-bottom: 1rem;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.service-card p {
+.service-description {
   color: var(--toast);
-  margin-bottom: 1.5rem;
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.service-pricing {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #FFF5F2;
+  border-radius: 15px;
 }
 
 .service-price {
   display: block;
   color: var(--beaver);
+  font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
-  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-period {
+  color: var(--toast);
+  font-size: 0.9rem;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.service-features li {
+  color: var(--toast);
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.service-features li::before {
+  content: "✓";
+  color: var(--beaver);
+  margin-right: 0.5rem;
+  font-weight: bold;
 }
 
 .service-button {
-  padding: 0.8rem 2rem;
+  margin-top: auto;
+  padding: 1rem 2rem;
   background-color: var(--beaver);
   color: white;
   border: none;
   border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -78,12 +126,45 @@ h2 {
   background-color: var(--toast);
 }
 
+.service-options {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.option-type {
+  color: var(--toast);
+  font-weight: 500;
+}
+
+.option-price {
+  color: var(--beaver);
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .services {
     padding: 3rem 1rem;
   }
-  
-  h2 {
+
+  .services h2 {
     font-size: 2rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
   }
 }
