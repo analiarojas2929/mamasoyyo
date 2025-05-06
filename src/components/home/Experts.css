@@ -1,0 +1,73 @@
+.experts {
+  padding: 5rem 2rem;
+  background-color: #FFF5F2;
+}
+
+.experts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.expert-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.expert-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.expert-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.expert-card h3 {
+  color: var(--beaver);
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.expert-role {
+  color: var(--toast);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.expert-card p {
+  color: var(--toast);
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.expert-button {
+  background-color: var(--beaver);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.expert-button:hover {
+  background-color: var(--toast);
+}
+
+@media (max-width: 768px) {
+  .experts {
+    padding: 3rem 1rem;
+  }
+}

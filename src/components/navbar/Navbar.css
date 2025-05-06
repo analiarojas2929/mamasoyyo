@@ -19,11 +19,19 @@
   gap: 1rem;
 }
 
+.nav-brand a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .nav-brand h1 {
   font-size: 1.5rem;
   color: var(--beaver);
   margin: 0;
   font-weight: 600;
+  color: var(--beaver);
 }
 
 .nav-menu {
@@ -109,3 +117,4 @@
     right: 0;
   }
 }
+
