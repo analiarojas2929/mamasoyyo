@@ -1,6 +1,24 @@
 .why-us {
   padding: 5rem 2rem;
-  background-color: #FFFFFF;
+  background: linear-gradient(135deg, #FFF5F2 0%, #FFFFFF 100%);
+}
+
+.why-us h2 {
+  text-align: center;
+  color: var(--beaver);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--toast);
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .reasons-grid {
@@ -12,10 +30,11 @@
 }
 
 .reason-card {
+  background: white;
   padding: 2rem;
-  text-align: center;
-  background-color: var(--pot-pourri);
   border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -25,7 +44,7 @@
 
 .reason-icon {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   display: block;
 }
 
@@ -43,5 +62,9 @@
 @media (max-width: 768px) {
   .why-us {
     padding: 3rem 1rem;
+  }
+
+  .why-us h2 {
+    font-size: 2rem;
   }
 }
