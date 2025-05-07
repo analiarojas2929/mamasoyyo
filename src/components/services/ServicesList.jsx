@@ -1,5 +1,11 @@
 import React from 'react';
 import '../../styles/Services.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faUserGroup, 
+  faCalendarCheck, 
+  faStar 
+} from '@fortawesome/free-solid-svg-icons';
 
 const ServicesList = () => {
   const services = [
@@ -15,7 +21,8 @@ const ServicesList = () => {
         "Seguimiento continuo",
         "Material de apoyo"
       ],
-      image: "/images/personal-coaching.jpg"
+      icon: faUserGroup,
+      image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80"
     },
     {
       id: 2,
@@ -29,7 +36,8 @@ const ServicesList = () => {
         "Ejercicios prácticos",
         "Certificado de participación"
       ],
-      image: "/images/group-workshop.jpg"
+      icon: faCalendarCheck,
+      image: "https://images.unsplash.com/photo-1591474200742-8e512e6f98f8?auto=format&fit=crop&q=80"
     },
     {
       id: 3,
@@ -43,7 +51,8 @@ const ServicesList = () => {
         "Comunidad privada",
         "Soporte prioritario"
       ],
-      image: "/images/integral-program.jpg"
+      icon: faStar,
+      image: "https://images.unsplash.com/photo-1609220361638-14ceb45e5e1e?auto=format&fit=crop&q=80"
     }
   ];
 
@@ -58,8 +67,13 @@ const ServicesList = () => {
         <div className="services-grid">
           {services.map(service => (
             <div key={service.id} className="service-card">
-              <div className="service-image">
-                <img src={service.image} alt={service.title} />
+              <div className="service-header">
+                <div className="service-icon">
+                  <FontAwesomeIcon icon={service.icon} />
+                </div>
+                <div className="service-image">
+                  <img src={service.image} alt={service.title} />
+                </div>
               </div>
               <div className="service-content">
                 <h3>{service.title}</h3>

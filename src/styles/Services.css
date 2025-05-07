@@ -91,9 +91,35 @@
   box-shadow: 0 8px 25px rgba(150, 105, 92, 0.15);
 }
 
+.service-header {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+}
+
+.service-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon svg {
+  font-size: 1.5rem;
+  color: var(--toast);
+}
+
 .service-image {
   width: 100%;
-  height: 200px;
+  height: 220px;
   overflow: hidden;
 }
 
@@ -503,61 +529,53 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
+.faq-item.active {
+  background-color: var(--pot-pourri);
+  box-shadow: 0 8px 15px rgba(150, 105, 92, 0.2);
+  border-color: var(--toast);
+}
+
 .faq-question {
   padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  background: white;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.faq-question:hover {
-  background-color: rgba(150, 105, 92, 0.05);
+.faq-item.active .faq-question {
+  background-color: var(--pot-pourri);
 }
 
-.faq-question h3 {
+.faq-item.active .faq-question h3 {
   color: var(--toast);
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0;
-  flex: 1;
-  padding-right: 1rem;
-}
-
-.faq-icon {
-  color: var(--toast);
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
-}
-
-.faq-item.active {
-  box-shadow: 0 8px 15px rgba(150, 105, 92, 0.1);
-}
-
-.faq-item.active .faq-icon {
-  transform: rotate(180deg);
+  font-weight: 700;
 }
 
 .faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
-  background-color: white;
 }
 
 .faq-item.active .faq-answer {
   padding: 0 1.5rem 1.5rem;
   max-height: 500px;
+  background-color: var(--pot-pourri);
 }
 
-.faq-answer p {
+.faq-item.active .faq-answer p {
   color: var(--beaver);
-  line-height: 1.6;
-  margin: 0;
-  font-size: 1rem;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  color: var(--toast);
+}
+
+.faq-question:hover {
+  background-color: var(--pot-pourri);
 }
 
 @media (max-width: 768px) {
