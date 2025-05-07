@@ -8,7 +8,7 @@ import WhyUs from '../components/home/WhyUs';
 import Experts from '../components/home/Experts';
 import Blog from '../components/home/Blog';
 import FAQ from '../components/home/FAQ';
-import './HomePage.css';
+import '../styles/HomePage.css';
 
 const HomePage = () => {
   return (

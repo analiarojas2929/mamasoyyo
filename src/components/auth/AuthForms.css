@@ -387,3 +387,110 @@
   font-size: 1rem;
   transition: transform 0.3s ease;
 }
+
+/* Social login styles */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid var(--pot-pourri);
+  background: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-button.google {
+  color: #4285f4;
+}
+
+.social-button.facebook {
+  color: #3b5998;
+}
+
+.social-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: var(--pot-pourri);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.divider span {
+  background-color: white;
+  padding: 0 10px;
+  color: var(--beaver);
+  font-size: 0.9rem;
+}
+
+.forgot-password {
+  background: none;
+  border: none;
+  color: var(--beaver);
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: var(--toast);
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: var(--beaver);
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.back-button:hover {
+  color: var(--toast);
+}
+
+@media (max-width: 480px) {
+  .social-button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .divider {
+    margin: 15px 0;
+  }
+}
