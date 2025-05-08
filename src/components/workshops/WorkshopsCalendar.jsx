@@ -58,8 +58,26 @@ const WorkshopsCalendar = () => {
 
   // Convertir fechas de string a objetos Date
   const workshopDates = Object.values(workshops).flat().map(workshop => {
-    const [day, month, year] = workshop.date.split(' ')[0].split(',')[0].split(' ');
-    return new Date(year, ['Mayo'].indexOf(month), parseInt(day));
+    // Mejoramos el parsing de la fecha para hacerlo más robusto
+    try {
+      const dateString = workshop.date;
+      const dateParts = dateString.split(' ');
+      const day = parseInt(dateParts[0]); // Extraemos solo el número
+      const month = dateParts[1].replace(',', ''); // Quitamos la coma del mes
+      const year = parseInt(dateParts[2]);
+      
+      // Mapa de meses en español a su índice (0-11)
+      const monthMap = {
+        'Enero': 0, 'Febrero': 1, 'Marzo': 2, 'Abril': 3,
+        'Mayo': 4, 'Junio': 5, 'Julio': 6, 'Agosto': 7,
+        'Septiembre': 8, 'Octubre': 9, 'Noviembre': 10, 'Diciembre': 11
+      };
+      
+      return new Date(year, monthMap[month], day);
+    } catch (error) {
+      console.error('Error parsing date:', workshop.date);
+      return new Date(); // Fecha predeterminada en caso de error
+    }
   });
 
   // Función para resaltar fechas con talleres
