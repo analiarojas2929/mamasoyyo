@@ -61,7 +61,7 @@
 /* Hero Section Styles */
 .community-hero {
   position: relative;
-  height: 80vh;
+  height: 80vh; /* Mantener para pantallas grandes */
   min-height: 600px;
   background-image: linear-gradient(rgba(150, 105, 92, 0.7), rgba(0, 0, 0, 0.6)), 
                     url('https://images.unsplash.com/photo-1591604021695-0c69b7c05981?auto=format&fit=crop&q=80');
@@ -88,11 +88,14 @@
   );
 }
 
+/* Actualizar los estilos de hero-content para mejorar la responsividad */
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 900px;
   padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .hero-content h1 {
@@ -101,6 +104,7 @@
   margin-bottom: 1.5rem;
   color: var(--pot-pourri);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
 }
 
 .hero-description {
@@ -108,6 +112,9 @@
   line-height: 1.6;
   margin-bottom: 2.5rem;
   color: white;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-cta {
@@ -188,8 +195,11 @@
 
 /* Forums Section Styles */
 .community-forums {
-  padding: 5rem 2rem;
+  padding: 8rem 2rem 5rem; /* Aumentado el padding superior de 5rem a 8rem */
   background: linear-gradient(135deg, #fff5f2 0%, #ffffff 100%);
+  position: relative; /* Añadido position relative */
+  border-radius: 40px 40px 0 0; /* Añadido borde redondeado superior */
+  z-index: 2; /* Asegurar que esté por encima del hero */
 }
 
 .forums-container {
@@ -862,135 +872,6 @@
   gap: 1rem;
 }
 
-/* Support Section Styles */
-.community-support {
-  padding: 5rem 2rem;
-  background: linear-gradient(135deg, #fff5f2 0%, #ffffff 100%);
-}
-
-.support-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.support-content {
-  margin-top: 3rem;
-}
-
-.support-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
-}
-
-.support-card {
-  position: relative;
-  background: white;
-  padding: 2rem;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-}
-
-.support-card:hover {
-  transform: translateY(-10px);
-}
-
-.support-icon {
-  font-size: 2.5rem;
-  color: var(--toast);
-  margin-bottom: 1.5rem;
-}
-
-.support-card h3 {
-  color: var(--toast);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.support-card p {
-  color: var(--beaver);
-  margin-bottom: 1.5rem;
-}
-
-.support-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
-  background: var(--toast);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.support-button:hover {
-  background: var(--beaver);
-  gap: 1rem;
-}
-
-.availability-badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: #e8f5e9;
-  color: #2e7d32;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.hours-section {
-  background: white;
-  border-radius: 20px;
-  padding: 3rem;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.hours-icon {
-  font-size: 2.5rem;
-  color: var(--toast);
-  margin-bottom: 1.5rem;
-}
-
-.hours-content h3 {
-  color: var(--toast);
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-}
-
-.hours-grid {
-  display: grid;
-  gap: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.hours-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background: #f8f9fa;
-  border-radius: 10px;
-}
-
-.hours-item .day {
-  color: var(--beaver);
-  font-weight: 600;
-}
-
-.hours-item .time {
-  color: var(--toast);
-}
-
 @media (max-width: 768px) {
   .groups-grid {
     grid-template-columns: 1fr;
@@ -1003,25 +884,6 @@
 
   .group-stats {
     grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .support-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .support-card {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .hours-section {
-    padding: 2rem;
-  }
-
-  .hours-item {
-    flex-direction: column;
-    gap: 0.5rem;
     text-align: center;
   }
 }
@@ -1070,6 +932,18 @@
   }
 }
 
+/* Mejorar estilos responsivos existentes */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+}
+
 @media (max-width: 768px) {
   .community-container h2,
   .forums-container h2,
@@ -1084,6 +958,38 @@
   .section-description {
     font-size: 1rem;
     padding: 0 1rem;
+  }
+
+  .hero-content {
+    padding: 1.5rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .community-stats {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    margin-bottom: 1rem; /* Añadir margen inferior */
   }
 
   .hero-content h1 {
@@ -1133,6 +1039,12 @@
     justify-content: center;
   }
 
+  .community-forums {
+    padding: 6rem 2rem 4rem; /* Reducir padding en pantallas más pequeñas */
+    margin-top: -2rem;
+    border-radius: 30px 30px 0 0;
+  }
+
   .events-grid {
     grid-template-columns: 1fr;
   }
@@ -1140,6 +1052,51 @@
   .event-card {
     max-width: 400px;
     margin: 0 auto;
+  }
+
+  .community-hero {
+    height: auto; /* Cambiar a auto para que se ajuste al contenido */
+    min-height: 100vh; /* Asegurar que al menos cubra la pantalla */
+    padding: 80px 0; /* Añadir padding vertical para espaciado */
+    background-attachment: scroll; /* Cambiar a scroll para mejor compatibilidad móvil */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content {
+    padding: 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .community-stats {
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.8rem;
+  }
+  
+  .stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .community-forums {
+    padding: 5rem 1.5rem 3rem;
+    margin-top: -1.5rem;
+    border-radius: 25px 25px 0 0;
+  }
+
+  .community-hero {
+    padding: 60px 0; /* Reducir padding en pantallas muy pequeñas */
   }
 }
 
@@ -1151,5 +1108,21 @@
   .story-interactions {
     flex-wrap: wrap;
     gap: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  
+  .primary-button,
+  .secondary-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
 }

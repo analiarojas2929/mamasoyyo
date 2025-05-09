@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import WorkshopsPage from './pages/WorkshopsPage';
 import CommunityPage from './pages/CommunityPage';
+import ContactPage from './pages/ContactPage';
 import './App.css';
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
           <Route path="/servicios" element={<ServicesPage />} />
           <Route path="/talleres" element={<WorkshopsPage />} />
           <Route path="/comunidad" element={<CommunityPage />} />
-          <Route path="/contacto" element={<div>Contacto</div>} />
+          <Route path="/contacto" element={<ContactPage />} />
         </Routes>
         <Footer />
       </div>
