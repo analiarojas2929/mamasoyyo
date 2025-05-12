@@ -4,7 +4,7 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="heros">
       <div className="heros-content">
         <h1>Reconéctate contigo misma</h1>
         <p className="heros-subtitle">Un espacio seguro para madres que buscan balance, apoyo y crecimiento personal</p>
