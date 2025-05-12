@@ -61,9 +61,10 @@ const Services = () => {
         {services.map((service, index) => (
           <div key={index} className="service-card">
             <div className="service-header">
-              <span className="service-icon">{service.icon}</span>
+              <div className="home-service-icon">
+                {service.icon}
+              </div>
               <h3>{service.title}</h3>
-              <p className="service-description">{service.description}</p>
             </div>
             <div className="service-pricing">
               <span className="service-price">{service.price}</span>

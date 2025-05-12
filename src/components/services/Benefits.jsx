@@ -40,7 +40,7 @@ const Benefits = () => {
         <div className="benefits-grid">
           {benefits.map((benefit) => (
             <div key={benefit.id} className="benefit-card">
-              <div className="benefit-icon">
+              <div className="benefits-icon">
                 {benefit.icon}
               </div>
               <h3>{benefit.title}</h3>

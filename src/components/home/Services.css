@@ -49,11 +49,7 @@
   margin-bottom: 2rem;
 }
 
-.service-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  display: block;
-}
+
 
 .service-card h3 {
   color: var(--beaver);
@@ -167,4 +163,21 @@
   .service-card {
     padding: 1.5rem;
   }
+}
+
+/* Alternativa: Renombrar las clases para evitar conflictos */
+.home-service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: var(--beaver);
+}
+
+.home-service-icon svg {
+  width: 3rem;
+  height: 3rem;
+  display: block;
 }

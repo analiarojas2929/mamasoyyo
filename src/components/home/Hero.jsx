@@ -5,15 +5,15 @@ import './Hero.css';
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="hero-content">
+      <div className="heros-content">
         <h1>Reconéctate contigo misma</h1>
-        <p className="hero-subtitle">Un espacio seguro para madres que buscan balance, apoyo y crecimiento personal</p>
-        <div className="hero-buttons">
+        <p className="heros-subtitle">Un espacio seguro para madres que buscan balance, apoyo y crecimiento personal</p>
+        <div className="heros-buttons">
           <button className="cta-button primary">Comienza tu viaje</button>
           <button className="cta-button secondary">Conoce más</button>
         </div>
       </div>
-      <div className="hero-image">
+      <div className="heros-image">
         <img src={heroImage} alt="Madre sonriente con su bebé" />
       </div>
     </section>
